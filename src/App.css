@@ -3,7 +3,12 @@
 }
 
 footer {
-  background-color: #ccc;
+  background-color: #272e38;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -11,7 +16,7 @@ footer {
 }
 nav {
   display: flex;
-  background-color: #ccc;
+  background-color: #272e38;
 }
 ul {
   display: flex;
@@ -22,12 +27,144 @@ ul {
 li {
   font-size: 20px;
   margin: 10px;
-  color: #fff;
 }
-a {
+ul li a {
+  color: #fff;
   text-decoration: none;
-  color: #444;
+  font-size: 25px;
+  margin: 15px;
+}
+@media screen and (max-width: 600px) {
+  ul li a {
+    font-size: 20px;
+  }
 }
 .activeLink {
-  color: rgb(237, 83, 199);
+  color: rgb(89, 135, 240);
+}
+.profile {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.profile-body {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  profile-body {
+    width: auto;
+  }
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  margin: 200px 250px 0 400px;
+}
+@media screen and (max-width: 600px) {
+  .right-side {
+    width: 180px;
+    margin: 100px 0 0 150px;
+  }
+  .right-side h2 {
+    font-size: 17px;
+  }
+}
+
+aside {
+  background-color: #272e38;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 800px;
+  width: 200px;
+  position: fixed;
+  left: 0;
+  border-radius: 0 30px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  aside {
+    width: 130px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+aside ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.activeOne {
+  color: rgb(89, 135, 240);
+}
+.icons-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+.icons-container a {
+  color: #ccc;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+}
+h2 {
+  color: #272e38;
+  opacity: 0.7;
+  margin-left: 20px;
+}
+li a {
+  text-decoration: none;
+  color: #272e38;
+}
+h2 span {
+  color: rgb(89, 135, 240);
+}
+.blog-switcher-links {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.blog-switcher-links a {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  color: #fff;
+  background-color: #272e38;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  text-decoration: none;
+  border-radius: 4px;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  color: #fff;
+  background-color: #272e38;
+  width: 200px;
+  margin-left: 30px;
+  padding: 10px;
+  border: none;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

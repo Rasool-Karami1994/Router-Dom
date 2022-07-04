@@ -1,12 +1,14 @@
 import React from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
-const Navigation = ({ location }) => {
+const Navigation = () => {
+  const params = useParams();
+  console.log(params);
   const items = [
     { name: "Home", to: "/", exact: true },
     { name: "About us", to: "/about-us" },
     { name: "Blogs", to: "/blogs" },
-    { name: "Posts", to: "/posts" },
+    { name: "Profile", to: "/profile" },
   ];
   return (
     <nav>
@@ -16,8 +18,7 @@ const Navigation = ({ location }) => {
             <li key={item.to}>
               <NavLink
                 to={item.to}
-                activeClassName="activeLink"
-                exact={item.exact || false}
+                className={(navData) => (navData.isActive ? "activeLink" : "")}
               >
                 {item.name}
               </NavLink>
@@ -29,4 +30,4 @@ const Navigation = ({ location }) => {
   );
 };
 
-export default withRouter(Navigation);
+export default Navigation;

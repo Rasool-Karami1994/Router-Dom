@@ -1,16 +1,16 @@
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./layout/Layout";
 import routes from "./routes";
 function App() {
   return (
     <BrowserRouter>
       <Layout>
-        <Switch>
-          {routes.map((route) => (
-            <Route {...route} />
+        <Routes>
+          {routes.map((route, index) => (
+            <Route {...route} key={index} />
           ))}
-        </Switch>
+        </Routes>
       </Layout>
     </BrowserRouter>
   );
